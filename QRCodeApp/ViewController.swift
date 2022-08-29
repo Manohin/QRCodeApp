@@ -9,18 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var myTextField: UITextField!
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+
         buttonTwo.isEnabled = false
     }
-
     @IBAction func button (_sender: Any) {
         
         if let myString = myTextField.text {
@@ -37,7 +34,6 @@ class ViewController: UIViewController {
             buttonTwo.isEnabled = true
     }
     }
-    
     @IBAction func buttonScreenShot (_sender: Any) {
         
         func screenShotMethod() {
@@ -49,14 +45,9 @@ class ViewController: UIViewController {
             let screenshot = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             UIImageWriteToSavedPhotosAlbum(screenshot!, nil, nil, nil)
-            
         }
-        
     }
-    
-    
     func screenShotMethod () {
-        
     }
 }
 
