@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Привет! Разрешишь мне доступ к твоим изображеним?</string>
+	<key>CFBundleVersion</key>
+	<string></string>
 </dict>
 </plist>

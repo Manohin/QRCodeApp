@@ -1,24 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohx-hZ-auD">
+                                <rect key="frame" x="58" y="199" width="298" height="35"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Сохранить изображение"/>
+                                <connections>
+                                    <action selector="buttonScreenShotWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2G-dH-TKX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL8-Hn-djq">
+                                <rect key="frame" x="58" y="151" width="298" height="35"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Сгенерировать QR код"/>
+                                <connections>
+                                    <action selector="buttonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tFE-Ey-b4P"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugR-bG-l82">
+                                <rect key="frame" x="47" y="87" width="321" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-18-jK5">
+                                <rect key="frame" x="132" y="298" width="150" height="150"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zL8-Hn-djq" secondAttribute="trailing" constant="58" id="0j9-Dx-5Wc"/>
+                            <constraint firstItem="zL8-Hn-djq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="2Gw-bc-rex"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uz7-18-jK5" secondAttribute="bottom" constant="414" id="2uQ-gN-0st"/>
+                            <constraint firstItem="ohx-hZ-auD" firstAttribute="top" secondItem="zL8-Hn-djq" secondAttribute="bottom" constant="13" id="CdT-3e-xBj"/>
+                            <constraint firstItem="uz7-18-jK5" firstAttribute="top" secondItem="ohx-hZ-auD" secondAttribute="bottom" constant="64" id="IeX-g4-soO"/>
+                            <constraint firstItem="uz7-18-jK5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="Vp5-44-aTG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uz7-18-jK5" secondAttribute="trailing" constant="132" id="XHg-ZK-QUF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ugR-bG-l82" secondAttribute="trailing" constant="46" id="Yg1-JK-3Lh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ohx-hZ-auD" secondAttribute="trailing" constant="58" id="ZdV-2c-NEP"/>
+                            <constraint firstItem="ugR-bG-l82" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="ezO-19-4wK"/>
+                            <constraint firstItem="zL8-Hn-djq" firstAttribute="top" secondItem="ugR-bG-l82" secondAttribute="bottom" constant="30" id="lMb-oz-jlD"/>
+                            <constraint firstItem="ugR-bG-l82" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="rz6-Z6-jk3"/>
+                            <constraint firstItem="ohx-hZ-auD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="tvJ-he-hcI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonOne" destination="zL8-Hn-djq" id="zqS-Xp-SZu"/>
+                        <outlet property="buttonTwo" destination="ohx-hZ-auD" id="mvb-ag-N6g"/>
+                        <outlet property="myImageView" destination="uz7-18-jK5" id="t1M-aS-cOy"/>
+                        <outlet property="myTextField" destination="ugR-bG-l82" id="WEG-pT-Nfa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="54.910714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
