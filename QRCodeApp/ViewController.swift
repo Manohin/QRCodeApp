@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBAction func button (_sender: Any) {
         
         if let myString = myTextField.text {
-            let data = myString.data (using: .ascii, allowLossyConversion: false)
+            let data = myString.data (using: .utf8, allowLossyConversion: false)
             let filter = CIFilter (name: "CIQRCodeGenerator")
             filter?.setValue(data, forKey: "InputMessage")
             
